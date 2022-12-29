@@ -1,0 +1,884 @@
+2022-12-28T03:04:00.6660997Z ##[group]Run github/codeql-action/analyze@v1
+2022-12-28T03:04:00.6661325Z with:
+2022-12-28T03:04:00.6661540Z   output: ../results
+2022-12-28T03:04:00.6661753Z   upload: true
+2022-12-28T03:04:00.6661988Z   cleanup-level: brutal
+2022-12-28T03:04:00.6662240Z   add-snippets: false
+2022-12-28T03:04:00.6662471Z   skip-queries: false
+2022-12-28T03:04:00.6662794Z   checkout_path: /home/runner/work/open-reusables/open-reusables
+2022-12-28T03:04:00.6663120Z   upload-database: true
+2022-12-28T03:04:00.6663928Z   wait-for-processing: true
+2022-12-28T03:04:00.6664334Z   token: ***
+2022-12-28T03:04:00.6664581Z   matrix: {
+  "language": "javascript"
+}
+2022-12-28T03:04:00.6664832Z   expect-error: false
+2022-12-28T03:04:00.6665050Z env:
+2022-12-28T03:04:00.6665276Z   CODEQL_ACTION_VERSION: 1.1.37
+2022-12-28T03:04:00.6665562Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2022-12-28T03:04:00.6665858Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2022-12-28T03:04:00.6666217Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql-analysis.yml:analyze
+2022-12-28T03:04:00.6666631Z   CODEQL_WORKFLOW_STARTED_AT: 2022-12-28T03:03:51.142Z
+2022-12-28T03:04:00.6666928Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2022-12-28T03:04:00.6667224Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2022-12-28T03:04:00.6667483Z   CODEQL_RAM: 5919
+2022-12-28T03:04:00.6667694Z   CODEQL_THREADS: 2
+2022-12-28T03:04:00.6667919Z ##[endgroup]
+2022-12-28T03:04:01.0674995Z ##[warning]CodeQL Action v1 will be deprecated on January 18th, 2023. Please upgrade to v2. For more information, see https://github.blog/changelog/2022-04-27-code-scanning-deprecation-of-codeql-action-v1/
+2022-12-28T03:04:01.4512353Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql version --format=terse
+2022-12-28T03:04:02.0499921Z 2.11.5
+2022-12-28T03:04:02.0760482Z ##[group]Extracting javascript
+2022-12-28T03:04:03.1374798Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database trace-command -O=javascript.trap.cache.dir=/home/runner/work/_temp/trapCaches/javascript -O=javascript.trap.cache.bound=1024 -O=javascript.trap.cache.write=true /home/runner/work/_temp/codeql_databases/javascript -- /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/autobuild.sh
+2022-12-28T03:04:04.1011337Z Running command in /home/runner/work/open-reusables/open-reusables: [/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/autobuild.sh]
+2022-12-28T03:04:04.4799777Z [2022-12-28 03:04:04] [build-stdout] Parallel extraction with 2 threads.
+2022-12-28T03:04:05.1129040Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/codeql-analysis.yml
+2022-12-28T03:04:05.1187346Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/test-inputs.yml
+2022-12-28T03:04:05.2268738Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/test-inputs.yml (107 ms)
+2022-12-28T03:04:05.2284005Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/testworkflow.yml
+2022-12-28T03:04:05.2288782Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/codeql-analysis.yml (115 ms)
+2022-12-28T03:04:05.2296052Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/test/suite/extension.test.js
+2022-12-28T03:04:05.2537002Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/.github/workflows/testworkflow.yml (24 ms)
+2022-12-28T03:04:05.2623795Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/test/suite/index.js
+2022-12-28T03:04:05.4020998Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/test/suite/index.js (139 ms)
+2022-12-28T03:04:05.4025424Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/.github/dependabot.yml
+2022-12-28T03:04:05.4074323Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/test/suite/extension.test.js (177 ms)
+2022-12-28T03:04:05.4103228Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/test/runTest.js
+2022-12-28T03:04:05.4132602Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/.github/dependabot.yml (9 ms)
+2022-12-28T03:04:05.4219050Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/.eslintrc.json
+2022-12-28T03:04:05.4278066Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/.eslintrc.json (5 ms)
+2022-12-28T03:04:05.4286097Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/copier.js
+2022-12-28T03:04:05.4342390Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/test/runTest.js (10 ms)
+2022-12-28T03:04:05.4348917Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/extension.js
+2022-12-28T03:04:05.4466992Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/copier.js (16 ms)
+2022-12-28T03:04:05.4510411Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/extension.js (15 ms)
+2022-12-28T03:04:05.4516327Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/lister.js
+2022-12-28T03:04:05.4539570Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/lister.js (1 ms)
+2022-12-28T03:04:05.4545578Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/opener.js
+2022-12-28T03:04:05.4601496Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/package.json
+2022-12-28T03:04:05.4662422Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/package.json (3 ms)
+2022-12-28T03:04:05.4663177Z [2022-12-28 03:04:05] [build-stdout] Extracting /home/runner/work/open-reusables/open-reusables/shared.js
+2022-12-28T03:04:05.5123061Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/shared.js (42 ms)
+2022-12-28T03:04:05.5180243Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es5.js
+2022-12-28T03:04:05.5646162Z [2022-12-28 03:04:05] [build-stdout] Done extracting /home/runner/work/open-reusables/open-reusables/opener.js (109 ms)
+2022-12-28T03:04:05.5699871Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es3.js
+2022-12-28T03:04:05.6012012Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es5.js (81 ms)
+2022-12-28T03:04:05.6054798Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es6_collections.js
+2022-12-28T03:04:05.6495958Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es6_collections.js (45 ms)
+2022-12-28T03:04:05.6578837Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es2016.js
+2022-12-28T03:04:05.6625137Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es2016.js (4 ms)
+2022-12-28T03:04:05.6630181Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/intl.js
+2022-12-28T03:04:05.7116424Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/intl.js (47 ms)
+2022-12-28T03:04:05.7123514Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es6.js
+2022-12-28T03:04:05.9614399Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es6.js (247 ms)
+2022-12-28T03:04:05.9659194Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es2017.js
+2022-12-28T03:04:05.9662445Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es3.js (395 ms)
+2022-12-28T03:04:05.9668938Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/proxy.js
+2022-12-28T03:04:05.9728418Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/es2017.js (6 ms)
+2022-12-28T03:04:05.9762852Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/es/proxy.js (9 ms)
+2022-12-28T03:04:05.9765474Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/html5.js
+2022-12-28T03:04:05.9776382Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_screen_orientation.js
+2022-12-28T03:04:05.9945828Z [2022-12-28 03:04:05] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_screen_orientation.js (16 ms)
+2022-12-28T03:04:05.9951693Z [2022-12-28 03:04:05] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_permissions.js
+2022-12-28T03:04:06.0073489Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_permissions.js (11 ms)
+2022-12-28T03:04:06.0114380Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_notifications.js
+2022-12-28T03:04:06.0462646Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_notifications.js (33 ms)
+2022-12-28T03:04:06.0538907Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_batterystatus.js
+2022-12-28T03:04:06.0607865Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_batterystatus.js (6 ms)
+2022-12-28T03:04:06.0658436Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_usercontent.js
+2022-12-28T03:04:06.0722014Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_usercontent.js (5 ms)
+2022-12-28T03:04:06.0741990Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_event3.js
+2022-12-28T03:04:06.0889001Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_event3.js (14 ms)
+2022-12-28T03:04:06.0892899Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom2.js
+2022-12-28T03:04:06.4814094Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom2.js (388 ms)
+2022-12-28T03:04:06.4904063Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_xml.js
+2022-12-28T03:04:06.5468728Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_xml.js (54 ms)
+2022-12-28T03:04:06.5481200Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/page_visibility.js
+2022-12-28T03:04:06.5533475Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/page_visibility.js (3 ms)
+2022-12-28T03:04:06.5542072Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_gamepad.js
+2022-12-28T03:04:06.5615830Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_gamepad.js (6 ms)
+2022-12-28T03:04:06.5677134Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_dom.js
+2022-12-28T03:04:06.5680060Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/html5.js (589 ms)
+2022-12-28T03:04:06.5738137Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/fetchapi.js
+2022-12-28T03:04:06.6638739Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/fetchapi.js (89 ms)
+2022-12-28T03:04:06.6742917Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_midi.js
+2022-12-28T03:04:06.6940739Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_dom.js (126 ms)
+2022-12-28T03:04:06.6947324Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_event.js
+2022-12-28T03:04:06.7053365Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_event.js (10 ms)
+2022-12-28T03:04:06.7054520Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/url.js
+2022-12-28T03:04:06.7098045Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_midi.js (35 ms)
+2022-12-28T03:04:06.7136367Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_rtc.js
+2022-12-28T03:04:06.7196800Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/url.js (10 ms)
+2022-12-28T03:04:06.7290032Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/intl.js
+2022-12-28T03:04:06.7635807Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/intl.js (33 ms)
+2022-12-28T03:04:06.7648268Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_css3d.js
+2022-12-28T03:04:06.7953822Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_css3d.js (28 ms)
+2022-12-28T03:04:06.7962357Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_css.js
+2022-12-28T03:04:06.9641416Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_rtc.js (244 ms)
+2022-12-28T03:04:06.9652846Z [2022-12-28 03:04:06] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_range.js
+2022-12-28T03:04:07.0001166Z [2022-12-28 03:04:06] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_range.js (33 ms)
+2022-12-28T03:04:07.0100881Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/whatwg_encoding.js
+2022-12-28T03:04:07.0135407Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_css.js (214 ms)
+2022-12-28T03:04:07.0136786Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_vml.js
+2022-12-28T03:04:07.0174625Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/whatwg_encoding.js (6 ms)
+2022-12-28T03:04:07.0183372Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_dom.js
+2022-12-28T03:04:07.0245797Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_vml.js (12 ms)
+2022-12-28T03:04:07.0257169Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom3.js
+2022-12-28T03:04:07.1057304Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_dom.js (86 ms)
+2022-12-28T03:04:07.1096343Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webstorage.js
+2022-12-28T03:04:07.1358272Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webstorage.js (21 ms)
+2022-12-28T03:04:07.1366272Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_css.js
+2022-12-28T03:04:07.1476182Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom3.js (122 ms)
+2022-12-28T03:04:07.1484321Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_ext.js
+2022-12-28T03:04:07.1524461Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_ext.js (3 ms)
+2022-12-28T03:04:07.1533195Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/flash.js
+2022-12-28T03:04:07.1720300Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/flash.js (17 ms)
+2022-12-28T03:04:07.1735504Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_encoding.js
+2022-12-28T03:04:07.1776309Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_css.js (39 ms)
+2022-12-28T03:04:07.1777730Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_touch_event.js
+2022-12-28T03:04:07.1824525Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_encoding.js (7 ms)
+2022-12-28T03:04:07.1836235Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/streamsapi.js
+2022-12-28T03:04:07.2050925Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_touch_event.js (27 ms)
+2022-12-28T03:04:07.2159099Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_anim_timing.js
+2022-12-28T03:04:07.2212356Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/streamsapi.js (36 ms)
+2022-12-28T03:04:07.2215858Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/chrome.js
+2022-12-28T03:04:07.2296048Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_anim_timing.js (9 ms)
+2022-12-28T03:04:07.2330516Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_webcrypto.js
+2022-12-28T03:04:07.2681938Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_webcrypto.js (33 ms)
+2022-12-28T03:04:07.2692756Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_requestidlecallback.js
+2022-12-28T03:04:07.2755460Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_requestidlecallback.js (5 ms)
+2022-12-28T03:04:07.2816728Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_elementtraversal.js
+2022-12-28T03:04:07.2818097Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/chrome.js (57 ms)
+2022-12-28T03:04:07.2819225Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_geolocation.js
+2022-12-28T03:04:07.2893623Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_elementtraversal.js (9 ms)
+2022-12-28T03:04:07.2976661Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_event.js
+2022-12-28T03:04:07.2977973Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_geolocation.js (16 ms)
+2022-12-28T03:04:07.2979054Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_pointer_events.js
+2022-12-28T03:04:07.3006367Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_event.js (3 ms)
+2022-12-28T03:04:07.3027510Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/mediasource.js
+2022-12-28T03:04:07.3196833Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_pointer_events.js (17 ms)
+2022-12-28T03:04:07.3198203Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/iphone.js
+2022-12-28T03:04:07.3256442Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/mediasource.js (24 ms)
+2022-12-28T03:04:07.3270742Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/window.js
+2022-12-28T03:04:07.3419135Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/window.js (13 ms)
+2022-12-28T03:04:07.3426346Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_css.js
+2022-12-28T03:04:07.3445282Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/iphone.js (25 ms)
+2022-12-28T03:04:07.3498145Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_css.js
+2022-12-28T03:04:07.3874540Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_css.js (36 ms)
+2022-12-28T03:04:07.3881206Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_device_sensor_event.js
+2022-12-28T03:04:07.3949509Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_device_sensor_event.js (7 ms)
+2022-12-28T03:04:07.3999287Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_event.js
+2022-12-28T03:04:07.4570708Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_event.js (56 ms)
+2022-12-28T03:04:07.4576170Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_navigation_timing.js
+2022-12-28T03:04:07.4950023Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_css.js (150 ms)
+2022-12-28T03:04:07.4951412Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_xml.js
+2022-12-28T03:04:07.4960672Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_navigation_timing.js (38 ms)
+2022-12-28T03:04:07.4965467Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom4.js
+2022-12-28T03:04:07.5002400Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom4.js (3 ms)
+2022-12-28T03:04:07.5007178Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_dom.js
+2022-12-28T03:04:07.5098905Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/gecko_xml.js (14 ms)
+2022-12-28T03:04:07.5100238Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_serviceworker.js
+2022-12-28T03:04:07.5242526Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webkit_dom.js (23 ms)
+2022-12-28T03:04:07.5252452Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom1.js
+2022-12-28T03:04:07.5866931Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_serviceworker.js (76 ms)
+2022-12-28T03:04:07.5868045Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webgl.js
+2022-12-28T03:04:07.6146537Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_dom1.js (88 ms)
+2022-12-28T03:04:07.6218925Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_indexeddb.js
+2022-12-28T03:04:07.7093786Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_indexeddb.js (86 ms)
+2022-12-28T03:04:07.7094961Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_selectors.js
+2022-12-28T03:04:07.7182685Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/w3c_selectors.js (7 ms)
+2022-12-28T03:04:07.7183761Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/fileapi.js
+2022-12-28T03:04:07.8282776Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/fileapi.js (108 ms)
+2022-12-28T03:04:07.8333694Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_event.js
+2022-12-28T03:04:07.8742440Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/ie_event.js (45 ms)
+2022-12-28T03:04:07.8785700Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/events.js
+2022-12-28T03:04:07.8945296Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/events.js (20 ms)
+2022-12-28T03:04:07.8946139Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/os.js
+2022-12-28T03:04:07.9038676Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/web/webgl.js (317 ms)
+2022-12-28T03:04:07.9044055Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/punycode.js
+2022-12-28T03:04:07.9196172Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/punycode.js (14 ms)
+2022-12-28T03:04:07.9197351Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/string_decoder.js
+2022-12-28T03:04:07.9281066Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/string_decoder.js (7 ms)
+2022-12-28T03:04:07.9282151Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/process.js
+2022-12-28T03:04:07.9323958Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/process.js (3 ms)
+2022-12-28T03:04:07.9324958Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/dns.js
+2022-12-28T03:04:07.9601787Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/os.js (65 ms)
+2022-12-28T03:04:07.9603155Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/net.js
+2022-12-28T03:04:07.9611921Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/dns.js (28 ms)
+2022-12-28T03:04:07.9653724Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/sys.js
+2022-12-28T03:04:07.9783666Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/sys.js (4 ms)
+2022-12-28T03:04:07.9793343Z [2022-12-28 03:04:07] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/repl.js
+2022-12-28T03:04:07.9961399Z [2022-12-28 03:04:07] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/repl.js (16 ms)
+2022-12-28T03:04:08.0010290Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/url.js
+2022-12-28T03:04:08.0189983Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/url.js (17 ms)
+2022-12-28T03:04:08.0193741Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/console.js
+2022-12-28T03:04:08.0224255Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/console.js (3 ms)
+2022-12-28T03:04:08.0300982Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/tty.js
+2022-12-28T03:04:08.0446290Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/tty.js (14 ms)
+2022-12-28T03:04:08.0449761Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/vm.js
+2022-12-28T03:04:08.0469701Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/net.js (85 ms)
+2022-12-28T03:04:08.0499235Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/readline.js
+2022-12-28T03:04:08.0648226Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/vm.js (19 ms)
+2022-12-28T03:04:08.0649700Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/assert_legacy.js
+2022-12-28T03:04:08.0681389Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/assert_legacy.js (3 ms)
+2022-12-28T03:04:08.0687808Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/tls.js
+2022-12-28T03:04:08.1073366Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/readline.js (47 ms)
+2022-12-28T03:04:08.1074949Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/buffer.js
+2022-12-28T03:04:08.1178773Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/tls.js (48 ms)
+2022-12-28T03:04:08.1180017Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/v8.js
+2022-12-28T03:04:08.1326504Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/v8.js (14 ms)
+2022-12-28T03:04:08.1330856Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/domain.js
+2022-12-28T03:04:08.1427523Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/buffer.js (36 ms)
+2022-12-28T03:04:08.1428719Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/cluster.js
+2022-12-28T03:04:08.1435429Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/domain.js (10 ms)
+2022-12-28T03:04:08.1514112Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/timers.js
+2022-12-28T03:04:08.1707867Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/timers.js (18 ms)
+2022-12-28T03:04:08.1709157Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/http.js
+2022-12-28T03:04:08.2642930Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/cluster.js (120 ms)
+2022-12-28T03:04:08.2646846Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/querystring.js
+2022-12-28T03:04:08.2753696Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/querystring.js (10 ms)
+2022-12-28T03:04:08.2756451Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/stream.js
+2022-12-28T03:04:08.2790386Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/http.js (108 ms)
+2022-12-28T03:04:08.2791567Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/crypto.js
+2022-12-28T03:04:08.3776252Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/crypto.js (98 ms)
+2022-12-28T03:04:08.3783358Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/globals.js
+2022-12-28T03:04:08.3982454Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/stream.js (122 ms)
+2022-12-28T03:04:08.3987170Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/path.js
+2022-12-28T03:04:08.4489294Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/path.js (49 ms)
+2022-12-28T03:04:08.4543843Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/util.js
+2022-12-28T03:04:08.4829665Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/util.js (28 ms)
+2022-12-28T03:04:08.4833566Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/constants.js
+2022-12-28T03:04:08.6208836Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/globals.js (241 ms)
+2022-12-28T03:04:08.6220700Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/https.js
+2022-12-28T03:04:08.6410340Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/constants.js (156 ms)
+2022-12-28T03:04:08.6411617Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/module.js
+2022-12-28T03:04:08.6430451Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/https.js (20 ms)
+2022-12-28T03:04:08.6438310Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/fs.js
+2022-12-28T03:04:08.6476817Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/module.js (7 ms)
+2022-12-28T03:04:08.6481544Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/child_process.js
+2022-12-28T03:04:08.7567492Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/child_process.js (108 ms)
+2022-12-28T03:04:08.7568841Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/dgram.js
+2022-12-28T03:04:08.7970749Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/dgram.js (39 ms)
+2022-12-28T03:04:08.7972027Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/assert.js
+2022-12-28T03:04:08.8300913Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/assert.js (31 ms)
+2022-12-28T03:04:08.8302529Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/zlib.js
+2022-12-28T03:04:08.8639643Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/fs.js (217 ms)
+2022-12-28T03:04:08.8640933Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/bdd.js
+2022-12-28T03:04:08.8701816Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/bdd.js (7 ms)
+2022-12-28T03:04:08.8777740Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/vows.js
+2022-12-28T03:04:08.9042747Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/nodejs/zlib.js (74 ms)
+2022-12-28T03:04:08.9044411Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/jquery-3.2.js
+2022-12-28T03:04:08.9187561Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/vows.js (40 ms)
+2022-12-28T03:04:08.9229686Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/should.js
+2022-12-28T03:04:08.9515256Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/should.js (27 ms)
+2022-12-28T03:04:08.9523016Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/spidermonkey.js
+2022-12-28T03:04:08.9542250Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/spidermonkey.js (2 ms)
+2022-12-28T03:04:08.9543391Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/v8.js
+2022-12-28T03:04:08.9631138Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/v8.js (6 ms)
+2022-12-28T03:04:08.9632251Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/rhino.js
+2022-12-28T03:04:08.9766384Z [2022-12-28 03:04:08] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/rhino.js (15 ms)
+2022-12-28T03:04:08.9768671Z [2022-12-28 03:04:08] [build-stdout] Extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/jsshell.js
+2022-12-28T03:04:09.0252923Z [2022-12-28 03:04:09] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/vm/jsshell.js (47 ms)
+2022-12-28T03:04:09.1358301Z [2022-12-28 03:04:09] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/javascript/tools/data/externs/lib/jquery-3.2.js (231 ms)
+2022-12-28T03:04:09.1747667Z ##[endgroup]
+2022-12-28T03:04:09.1750967Z ##[group]Finalizing javascript
+2022-12-28T03:04:09.1755911Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database finalize --finalize-dataset --threads=2 --ram=5919 /home/runner/work/_temp/codeql_databases/javascript
+2022-12-28T03:04:10.1102194Z Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/javascript...
+2022-12-28T03:04:14.8256004Z TRAP import complete (4.7s).
+2022-12-28T03:04:15.2984920Z ##[endgroup]
+2022-12-28T03:04:15.2997323Z Code Scanning configuration file being processed in the codeql-action.
+2022-12-28T03:04:15.2999003Z ##[group]Running queries for javascript
+2022-12-28T03:04:15.3123889Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database run-queries --ram=5919 --threads=2 /home/runner/work/_temp/codeql_databases/javascript --min-disk-free=1024 -v /home/runner/work/_temp/codeql_databases/javascript-queries-builtin.qls
+2022-12-28T03:04:16.1302460Z Writing logs to /home/runner/work/_temp/codeql_databases/javascript/log/database-run-queries-20221228.030416.126.log.
+2022-12-28T03:04:16.9113786Z Writing logs to /home/runner/work/_temp/codeql_databases/javascript/log/execute-queries-20221228.030416.905.log.
+2022-12-28T03:04:17.3410777Z Recording pack reference codeql/javascript-queries at /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5.
+2022-12-28T03:04:17.7217455Z Did not find any ML models.
+2022-12-28T03:04:17.7229094Z Compiling in one thread due to RAM limits.
+2022-12-28T03:04:18.5164861Z [1/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DisablingSce.qlx.
+2022-12-28T03:04:18.7260536Z [2/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DoubleCompilation.qlx.
+2022-12-28T03:04:18.9313693Z [3/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/InsecureUrlWhitelist.qlx.
+2022-12-28T03:04:19.1805304Z [4/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/DOM/TargetBlank.qlx.
+2022-12-28T03:04:19.3088427Z [5/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/AllowRunningInsecureContent.qlx.
+2022-12-28T03:04:19.4624624Z [6/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/DisablingWebSecurity.qlx.
+2022-12-28T03:04:19.9868473Z [7/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/PolynomialReDoS.qlx.
+2022-12-28T03:04:20.3170286Z [8/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/ReDoS.qlx.
+2022-12-28T03:04:20.4496115Z [9/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/RegExp/IdentityReplacement.qlx.
+2022-12-28T03:04:20.7426129Z [10/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteHostnameRegExp.qlx.
+2022-12-28T03:04:20.9887595Z [11/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSchemeCheck.qlx.
+2022-12-28T03:04:21.0820082Z [12/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSubstringSanitization.qlx.
+2022-12-28T03:04:21.1807605Z [13/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncorrectSuffixCheck.qlx.
+2022-12-28T03:04:21.4381495Z [14/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/OverlyLargeRange.qlx.
+2022-12-28T03:04:21.7071577Z [15/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/UselessRegExpCharacterEscape.qlx.
+2022-12-28T03:04:21.9460771Z [16/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/TaintedPath.qlx.
+2022-12-28T03:04:22.1648786Z [17/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/ZipSlip.qlx.
+2022-12-28T03:04:22.4416945Z [18/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-073/TemplateObjectInjection.qlx.
+2022-12-28T03:04:22.7995247Z [19/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/CommandInjection.qlx.
+2022-12-28T03:04:23.2198130Z [20/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/SecondOrderCommandInjection.qlx.
+2022-12-28T03:04:23.5558165Z [21/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/ShellCommandInjectionFromEnvironment.qlx.
+2022-12-28T03:04:23.9678936Z [22/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UnsafeShellCommandConstruction.qlx.
+2022-12-28T03:04:24.0822173Z [23/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UselessUseOfCat.qlx.
+2022-12-28T03:04:24.3786463Z [24/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ExceptionXss.qlx.
+2022-12-28T03:04:24.6494362Z [25/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ReflectedXss.qlx.
+2022-12-28T03:04:24.8977022Z [26/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/StoredXss.qlx.
+2022-12-28T03:04:25.2036459Z [27/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeHtmlConstruction.qlx.
+2022-12-28T03:04:25.4017831Z [28/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeJQueryPlugin.qlx.
+2022-12-28T03:04:25.6239107Z [29/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/Xss.qlx.
+2022-12-28T03:04:25.9012979Z [30/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/XssThroughDom.qlx.
+2022-12-28T03:04:26.1102535Z [31/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-089/SqlInjection.qlx.
+2022-12-28T03:04:26.3081789Z [32/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/CodeInjection.qlx.
+2022-12-28T03:04:26.3182227Z [33/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ExpressionInjection.qlx.
+2022-12-28T03:04:26.5061570Z [34/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ImproperCodeSanitization.qlx.
+2022-12-28T03:04:26.7522562Z [35/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/UnsafeDynamicMethodAccess.qlx.
+2022-12-28T03:04:26.8493283Z [36/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-1004/ClientExposedCookie.qlx.
+2022-12-28T03:04:27.0054522Z [37/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/BadTagFilter.qlx.
+2022-12-28T03:04:27.0619612Z [38/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/DoubleEscaping.qlx.
+2022-12-28T03:04:27.2348054Z [39/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteHtmlAttributeSanitization.qlx.
+2022-12-28T03:04:27.3989369Z [40/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteMultiCharacterSanitization.qlx.
+2022-12-28T03:04:27.5264138Z [41/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteSanitization.qlx.
+2022-12-28T03:04:27.6411499Z [42/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/UnsafeHtmlExpansion.qlx.
+2022-12-28T03:04:27.8082666Z [43/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-134/TaintedFormatString.qlx.
+2022-12-28T03:04:27.9873209Z [44/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-178/CaseSensitiveMiddlewarePath.qlx.
+2022-12-28T03:04:28.0444138Z [45/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-200/PrivateFileExposure.qlx.
+2022-12-28T03:04:28.2194230Z [46/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-201/PostMessageStar.qlx.
+2022-12-28T03:04:28.4677644Z [47/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-209/StackTraceExposure.qlx.
+2022-12-28T03:04:28.5531878Z [48/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-295/DisablingCertificateValidation.qlx.
+2022-12-28T03:04:28.5612004Z [49/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-300/InsecureDependencyResolution.qlx.
+2022-12-28T03:04:28.7145893Z [50/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/BuildArtifactLeak.qlx.
+2022-12-28T03:04:28.8855967Z [51/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextLogging.qlx.
+2022-12-28T03:04:29.0639383Z [52/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextStorage.qlx.
+2022-12-28T03:04:29.1996213Z [53/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-326/InsufficientKeySize.qlx.
+2022-12-28T03:04:29.2497115Z [54/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BadRandomness.qlx.
+2022-12-28T03:04:29.4276129Z [55/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BrokenCryptoAlgorithm.qlx.
+2022-12-28T03:04:29.5893689Z [56/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-338/InsecureRandomness.qlx.
+2022-12-28T03:04:29.7722578Z [57/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-346/CorsMisconfigurationForCredentials.qlx.
+2022-12-28T03:04:29.8169005Z [58/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-347/MissingJWTKeyVerification.qlx.
+2022-12-28T03:04:29.9024079Z [59/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-352/MissingCsrfMiddleware.qlx.
+2022-12-28T03:04:30.1441423Z [60/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-400/DeepObjectResourceExhaustion.qlx.
+2022-12-28T03:04:30.2965285Z [61/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-502/UnsafeDeserialization.qlx.
+2022-12-28T03:04:30.3935867Z [62/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-598/SensitiveGetQuery.qlx.
+2022-12-28T03:04:30.5677982Z [63/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ClientSideUrlRedirect.qlx.
+2022-12-28T03:04:30.8466201Z [64/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ServerSideUrlRedirect.qlx.
+2022-12-28T03:04:31.0290680Z [65/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-611/Xxe.qlx.
+2022-12-28T03:04:31.1259070Z [66/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-614/ClearTextCookie.qlx.
+2022-12-28T03:04:31.3012410Z [67/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.qlx.
+2022-12-28T03:04:31.4744502Z [68/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-643/XpathInjection.qlx.
+2022-12-28T03:04:31.7260279Z [69/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/RegExpInjection.qlx.
+2022-12-28T03:04:31.8116664Z [70/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/ServerCrash.qlx.
+2022-12-28T03:04:31.9859697Z [71/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-754/UnvalidatedDynamicMethodCall.qlx.
+2022-12-28T03:04:32.0810719Z [72/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/MissingRateLimiting.qlx.
+2022-12-28T03:04:32.2343103Z [73/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/ResourceExhaustion.qlx.
+2022-12-28T03:04:32.3966452Z [74/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-776/XmlBomb.qlx.
+2022-12-28T03:04:32.6401004Z [75/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-798/HardcodedCredentials.qlx.
+2022-12-28T03:04:32.8281441Z [76/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-829/InsecureDownload.qlx.
+2022-12-28T03:04:33.0022305Z [77/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-830/FunctionalityFromUntrustedSource.qlx.
+2022-12-28T03:04:33.1809755Z [78/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-834/LoopBoundInjection.qlx.
+2022-12-28T03:04:33.3777682Z [79/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-843/TypeConfusionThroughParameterTampering.qlx.
+2022-12-28T03:04:33.6053378Z [80/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingAssignment.qlx.
+2022-12-28T03:04:33.7697077Z [81/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingFunction.qlx.
+2022-12-28T03:04:33.9469544Z [82/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingMergeCall.qlx.
+2022-12-28T03:04:34.1070485Z [83/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-916/InsufficientPasswordHash.qlx.
+2022-12-28T03:04:34.2880421Z [84/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-918/RequestForgery.qlx.
+2022-12-28T03:04:34.2958406Z [85/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/ExtractionErrors.qlx.
+2022-12-28T03:04:34.3111170Z [86/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/SuccessfullyExtractedFiles.qlx.
+2022-12-28T03:04:34.3230055Z [87/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfCode.qlx.
+2022-12-28T03:04:34.4631985Z [88/88] Loaded /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfUserCode.qlx.
+2022-12-28T03:04:34.5578680Z Starting evaluation of codeql/javascript-queries/AngularJS/DoubleCompilation.ql.
+2022-12-28T03:04:34.5579724Z Starting evaluation of codeql/javascript-queries/AngularJS/DisablingSce.ql.
+2022-12-28T03:04:34.5680645Z Starting evaluation of codeql/javascript-queries/AngularJS/InsecureUrlWhitelist.ql.
+2022-12-28T03:04:42.6913677Z Starting evaluation of codeql/javascript-queries/DOM/TargetBlank.ql.
+2022-12-28T03:04:44.5551959Z [1/88 eval 10s] Evaluation done; writing results to codeql/javascript-queries/AngularJS/DisablingSce.bqrs.
+2022-12-28T03:04:44.5700899Z [2/88 eval 10s] Evaluation done; writing results to codeql/javascript-queries/AngularJS/DoubleCompilation.bqrs.
+2022-12-28T03:04:44.5702431Z [3/88 eval 10s] Evaluation done; writing results to codeql/javascript-queries/AngularJS/InsecureUrlWhitelist.bqrs.
+2022-12-28T03:04:44.9756868Z Starting evaluation of codeql/javascript-queries/Diagnostics/ExtractionErrors.ql.
+2022-12-28T03:04:44.9799291Z Starting evaluation of codeql/javascript-queries/Diagnostics/SuccessfullyExtractedFiles.ql.
+2022-12-28T03:04:44.9813100Z [4/88 eval 5ms] Evaluation done; writing results to codeql/javascript-queries/Diagnostics/ExtractionErrors.bqrs.
+2022-12-28T03:04:45.0706407Z Starting evaluation of codeql/javascript-queries/Electron/AllowRunningInsecureContent.ql.
+2022-12-28T03:04:45.0720900Z [5/88 eval 92ms] Evaluation done; writing results to codeql/javascript-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2022-12-28T03:04:45.1218155Z [6/88 eval 50ms] Evaluation done; writing results to codeql/javascript-queries/Electron/AllowRunningInsecureContent.bqrs.
+2022-12-28T03:04:45.1222792Z Starting evaluation of codeql/javascript-queries/Electron/DisablingWebSecurity.ql.
+2022-12-28T03:04:45.1255273Z [7/88 eval 3ms] Evaluation done; writing results to codeql/javascript-queries/Electron/DisablingWebSecurity.bqrs.
+2022-12-28T03:04:45.1261701Z Starting evaluation of codeql/javascript-queries/Performance/PolynomialReDoS.ql.
+2022-12-28T03:04:45.6365836Z [8/88 eval 2.9s] Evaluation done; writing results to codeql/javascript-queries/DOM/TargetBlank.bqrs.
+2022-12-28T03:04:47.7054112Z Starting evaluation of codeql/javascript-queries/Performance/ReDoS.ql.
+2022-12-28T03:04:47.7366658Z Starting evaluation of codeql/javascript-queries/RegExp/IdentityReplacement.ql.
+2022-12-28T03:04:47.8242268Z [9/88 eval 87ms] Evaluation done; writing results to codeql/javascript-queries/RegExp/IdentityReplacement.bqrs.
+2022-12-28T03:04:47.9145684Z [10/88 eval 205ms] Evaluation done; writing results to codeql/javascript-queries/Performance/ReDoS.bqrs.
+2022-12-28T03:04:47.9229133Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/IncompleteHostnameRegExp.ql.
+2022-12-28T03:04:47.9733794Z [11/88 eval 49ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/IncompleteHostnameRegExp.bqrs.
+2022-12-28T03:04:47.9941148Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+2022-12-28T03:04:48.1500508Z [12/88 eval 156ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/IncompleteUrlSchemeCheck.bqrs.
+2022-12-28T03:04:48.1540314Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/IncompleteUrlSubstringSanitization.ql.
+2022-12-28T03:04:48.2441131Z [13/88 eval 90ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/IncompleteUrlSubstringSanitization.bqrs.
+2022-12-28T03:04:48.2454278Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/IncorrectSuffixCheck.ql.
+2022-12-28T03:04:48.5266728Z [14/88 eval 3.4s] Evaluation done; writing results to codeql/javascript-queries/Performance/PolynomialReDoS.bqrs.
+2022-12-28T03:04:48.5273039Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/OverlyLargeRange.ql.
+2022-12-28T03:04:48.5335612Z [15/88 eval 5ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/OverlyLargeRange.bqrs.
+2022-12-28T03:04:48.5353027Z Starting evaluation of codeql/javascript-queries/Security/CWE-020/UselessRegExpCharacterEscape.ql.
+2022-12-28T03:04:48.5694809Z [16/88 eval 323ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/IncorrectSuffixCheck.bqrs.
+2022-12-28T03:04:48.5704005Z Starting evaluation of codeql/javascript-queries/Security/CWE-022/TaintedPath.ql.
+2022-12-28T03:04:48.5820031Z Starting evaluation of codeql/javascript-queries/Security/CWE-022/ZipSlip.ql.
+2022-12-28T03:04:48.5821130Z [17/88 eval 10ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-022/TaintedPath.bqrs.
+2022-12-28T03:04:48.5878440Z [18/88 eval 52ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-020/UselessRegExpCharacterEscape.bqrs.
+2022-12-28T03:04:48.6032174Z Starting evaluation of codeql/javascript-queries/Security/CWE-073/TemplateObjectInjection.ql.
+2022-12-28T03:04:48.6351232Z [19/88 eval 54ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-022/ZipSlip.bqrs.
+2022-12-28T03:04:48.6409150Z [20/88 eval 38ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-073/TemplateObjectInjection.bqrs.
+2022-12-28T03:04:48.6410182Z Starting evaluation of codeql/javascript-queries/Security/CWE-078/CommandInjection.ql.
+2022-12-28T03:04:48.7282825Z [21/88 eval 87ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-078/CommandInjection.bqrs.
+2022-12-28T03:04:48.7317396Z Starting evaluation of codeql/javascript-queries/Security/CWE-078/SecondOrderCommandInjection.ql.
+2022-12-28T03:04:48.7604385Z Starting evaluation of codeql/javascript-queries/Security/CWE-078/ShellCommandInjectionFromEnvironment.ql.
+2022-12-28T03:04:48.7605623Z [22/88 eval 27ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-078/SecondOrderCommandInjection.bqrs.
+2022-12-28T03:04:48.7645322Z Starting evaluation of codeql/javascript-queries/Security/CWE-078/UnsafeShellCommandConstruction.ql.
+2022-12-28T03:04:48.7878778Z Starting evaluation of codeql/javascript-queries/Security/CWE-078/UselessUseOfCat.ql.
+2022-12-28T03:04:48.8240324Z [23/88 eval 65ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-078/ShellCommandInjectionFromEnvironment.bqrs.
+2022-12-28T03:04:48.8328753Z [24/88 eval 67ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-078/UnsafeShellCommandConstruction.bqrs.
+2022-12-28T03:04:48.8493244Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/ExceptionXss.ql.
+2022-12-28T03:04:48.9017132Z [25/88 eval 113ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-078/UselessUseOfCat.bqrs.
+2022-12-28T03:04:49.0102094Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/ReflectedXss.ql.
+2022-12-28T03:04:49.0594615Z [26/88 eval 209ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/ExceptionXss.bqrs.
+2022-12-28T03:04:49.1015610Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/StoredXss.ql.
+2022-12-28T03:04:49.2084214Z [27/88 eval 197ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/ReflectedXss.bqrs.
+2022-12-28T03:04:49.2263064Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/UnsafeHtmlConstruction.ql.
+2022-12-28T03:04:49.2465343Z [28/88 eval 143ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/StoredXss.bqrs.
+2022-12-28T03:04:49.2653324Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/UnsafeJQueryPlugin.ql.
+2022-12-28T03:04:49.3142367Z [29/88 eval 87ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/UnsafeHtmlConstruction.bqrs.
+2022-12-28T03:04:49.3482239Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/Xss.ql.
+2022-12-28T03:04:49.3483294Z [30/88 eval 82ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/UnsafeJQueryPlugin.bqrs.
+2022-12-28T03:04:49.3578861Z Starting evaluation of codeql/javascript-queries/Security/CWE-079/XssThroughDom.ql.
+2022-12-28T03:04:49.4134216Z [31/88 eval 66ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/Xss.bqrs.
+2022-12-28T03:04:49.4289112Z Starting evaluation of codeql/javascript-queries/Security/CWE-089/SqlInjection.ql.
+2022-12-28T03:04:49.4290280Z [32/88 eval 70ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-079/XssThroughDom.bqrs.
+2022-12-28T03:04:49.5506108Z Starting evaluation of codeql/javascript-queries/Security/CWE-094/CodeInjection.ql.
+2022-12-28T03:04:49.5711908Z Starting evaluation of codeql/javascript-queries/Security/CWE-094/ExpressionInjection.ql.
+2022-12-28T03:04:49.5749731Z [33/88 eval 28ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-094/CodeInjection.bqrs.
+2022-12-28T03:04:49.6072537Z Starting evaluation of codeql/javascript-queries/Security/CWE-094/ImproperCodeSanitization.ql.
+2022-12-28T03:04:49.6084758Z [34/88 eval 38ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-094/ExpressionInjection.bqrs.
+2022-12-28T03:04:49.6361637Z [35/88 eval 205ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-089/SqlInjection.bqrs.
+2022-12-28T03:04:49.6483350Z Starting evaluation of codeql/javascript-queries/Security/CWE-094/UnsafeDynamicMethodAccess.ql.
+2022-12-28T03:04:49.6484534Z [36/88 eval 41ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-094/ImproperCodeSanitization.bqrs.
+2022-12-28T03:04:49.6590832Z Starting evaluation of codeql/javascript-queries/Security/CWE-1004/ClientExposedCookie.ql.
+2022-12-28T03:04:49.6592086Z [37/88 eval 10ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-094/UnsafeDynamicMethodAccess.bqrs.
+2022-12-28T03:04:50.2984795Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/BadTagFilter.ql.
+2022-12-28T03:04:50.4213124Z [38/88 eval 124ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/BadTagFilter.bqrs.
+2022-12-28T03:04:50.4260933Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/DoubleEscaping.ql.
+2022-12-28T03:04:50.5868078Z [39/88 eval 159ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/DoubleEscaping.bqrs.
+2022-12-28T03:04:50.5874941Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/IncompleteHtmlAttributeSanitization.ql.
+2022-12-28T03:04:50.6275890Z [40/88 eval 39ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/IncompleteHtmlAttributeSanitization.bqrs.
+2022-12-28T03:04:50.6281495Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/IncompleteMultiCharacterSanitization.ql.
+2022-12-28T03:04:50.6676191Z [41/88 eval 1s] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-1004/ClientExposedCookie.bqrs.
+2022-12-28T03:04:50.6687223Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/IncompleteSanitization.ql.
+2022-12-28T03:04:50.6730287Z Starting evaluation of codeql/javascript-queries/Security/CWE-116/UnsafeHtmlExpansion.ql.
+2022-12-28T03:04:50.6731445Z [42/88 eval 44ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/IncompleteMultiCharacterSanitization.bqrs.
+2022-12-28T03:04:50.7124177Z [43/88 eval 42ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/IncompleteSanitization.bqrs.
+2022-12-28T03:04:50.7129686Z Starting evaluation of codeql/javascript-queries/Security/CWE-134/TaintedFormatString.ql.
+2022-12-28T03:04:50.7275643Z Starting evaluation of codeql/javascript-queries/Security/CWE-178/CaseSensitiveMiddlewarePath.ql.
+2022-12-28T03:04:50.7329829Z [44/88 eval 19ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-134/TaintedFormatString.bqrs.
+2022-12-28T03:04:50.7397934Z [45/88 eval 67ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-116/UnsafeHtmlExpansion.bqrs.
+2022-12-28T03:04:50.7424252Z Starting evaluation of codeql/javascript-queries/Security/CWE-200/PrivateFileExposure.ql.
+2022-12-28T03:04:50.7663045Z [46/88 eval 38ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-178/CaseSensitiveMiddlewarePath.bqrs.
+2022-12-28T03:04:50.7792428Z Starting evaluation of codeql/javascript-queries/Security/CWE-201/PostMessageStar.ql.
+2022-12-28T03:04:50.7964199Z [47/88 eval 16ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-201/PostMessageStar.bqrs.
+2022-12-28T03:04:50.8003632Z Starting evaluation of codeql/javascript-queries/Security/CWE-209/StackTraceExposure.ql.
+2022-12-28T03:04:50.8888237Z [48/88 eval 137ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-200/PrivateFileExposure.bqrs.
+2022-12-28T03:04:50.9005574Z Starting evaluation of codeql/javascript-queries/Security/CWE-295/DisablingCertificateValidation.ql.
+2022-12-28T03:04:50.9006731Z [49/88 eval 90ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-209/StackTraceExposure.bqrs.
+2022-12-28T03:04:50.9067402Z Starting evaluation of codeql/javascript-queries/Security/CWE-300/InsecureDependencyResolution.ql.
+2022-12-28T03:04:50.9096763Z Starting evaluation of codeql/javascript-queries/Security/CWE-312/BuildArtifactLeak.ql.
+2022-12-28T03:04:50.9103079Z [50/88 eval 4ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-300/InsecureDependencyResolution.bqrs.
+2022-12-28T03:04:51.0252877Z [51/88 eval 115ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-312/BuildArtifactLeak.bqrs.
+2022-12-28T03:04:51.0337718Z Starting evaluation of codeql/javascript-queries/Security/CWE-312/CleartextLogging.ql.
+2022-12-28T03:04:51.0503440Z [52/88 eval 150ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-295/DisablingCertificateValidation.bqrs.
+2022-12-28T03:04:51.0626575Z Starting evaluation of codeql/javascript-queries/Security/CWE-312/CleartextStorage.ql.
+2022-12-28T03:04:51.1357910Z [53/88 eval 72ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-312/CleartextStorage.bqrs.
+2022-12-28T03:04:51.1363604Z Starting evaluation of codeql/javascript-queries/Security/CWE-326/InsufficientKeySize.ql.
+2022-12-28T03:04:51.1954420Z [54/88 eval 58ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-326/InsufficientKeySize.bqrs.
+2022-12-28T03:04:51.1959795Z Starting evaluation of codeql/javascript-queries/Security/CWE-327/BadRandomness.ql.
+2022-12-28T03:04:51.2517487Z Starting evaluation of codeql/javascript-queries/Security/CWE-327/BrokenCryptoAlgorithm.ql.
+2022-12-28T03:04:51.2518939Z [55/88 eval 54ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-327/BadRandomness.bqrs.
+2022-12-28T03:04:51.2802578Z Starting evaluation of codeql/javascript-queries/Security/CWE-338/InsecureRandomness.ql.
+2022-12-28T03:04:51.2811959Z [56/88 eval 30ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-327/BrokenCryptoAlgorithm.bqrs.
+2022-12-28T03:04:51.5719598Z [57/88 eval 292ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-338/InsecureRandomness.bqrs.
+2022-12-28T03:04:51.5725195Z Starting evaluation of codeql/javascript-queries/Security/CWE-346/CorsMisconfigurationForCredentials.ql.
+2022-12-28T03:04:51.6079527Z [58/88 eval 34ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-346/CorsMisconfigurationForCredentials.bqrs.
+2022-12-28T03:04:51.6085658Z Starting evaluation of codeql/javascript-queries/Security/CWE-347/MissingJWTKeyVerification.ql.
+2022-12-28T03:04:51.6392095Z [59/88 eval 30ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-347/MissingJWTKeyVerification.bqrs.
+2022-12-28T03:04:51.6409919Z Starting evaluation of codeql/javascript-queries/Security/CWE-352/MissingCsrfMiddleware.ql.
+2022-12-28T03:04:51.6717453Z Starting evaluation of codeql/javascript-queries/Security/CWE-400/DeepObjectResourceExhaustion.ql.
+2022-12-28T03:04:51.6718706Z [60/88 eval 21ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-352/MissingCsrfMiddleware.bqrs.
+2022-12-28T03:04:51.6895259Z [61/88 eval 18ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-400/DeepObjectResourceExhaustion.bqrs.
+2022-12-28T03:04:51.6919069Z Starting evaluation of codeql/javascript-queries/Security/CWE-502/UnsafeDeserialization.ql.
+2022-12-28T03:04:51.7011058Z Starting evaluation of codeql/javascript-queries/Security/CWE-598/SensitiveGetQuery.ql.
+2022-12-28T03:04:51.7053425Z [62/88 eval 13ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-502/UnsafeDeserialization.bqrs.
+2022-12-28T03:04:51.7576632Z [63/88 eval 56ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-598/SensitiveGetQuery.bqrs.
+2022-12-28T03:04:51.7588256Z Starting evaluation of codeql/javascript-queries/Security/CWE-601/ClientSideUrlRedirect.ql.
+2022-12-28T03:04:51.7777058Z [64/88 eval 17ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-601/ClientSideUrlRedirect.bqrs.
+2022-12-28T03:04:51.7782315Z Starting evaluation of codeql/javascript-queries/Security/CWE-601/ServerSideUrlRedirect.ql.
+2022-12-28T03:04:51.9085909Z [65/88 eval 129ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-601/ServerSideUrlRedirect.bqrs.
+2022-12-28T03:04:51.9137615Z Starting evaluation of codeql/javascript-queries/Security/CWE-611/Xxe.ql.
+2022-12-28T03:04:52.0825350Z Starting evaluation of codeql/javascript-queries/Security/CWE-614/ClearTextCookie.ql.
+2022-12-28T03:04:52.0826342Z [66/88 eval 168ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-611/Xxe.bqrs.
+2022-12-28T03:04:52.0991416Z Starting evaluation of codeql/javascript-queries/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.ql.
+2022-12-28T03:04:52.1033502Z [67/88 eval 21ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-614/ClearTextCookie.bqrs.
+2022-12-28T03:04:52.1083012Z [68/88 eval 1.1s] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-312/CleartextLogging.bqrs.
+2022-12-28T03:04:52.1223698Z Starting evaluation of codeql/javascript-queries/Security/CWE-643/XpathInjection.ql.
+2022-12-28T03:04:52.1224705Z [69/88 eval 23ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.bqrs.
+2022-12-28T03:04:52.1281436Z Starting evaluation of codeql/javascript-queries/Security/CWE-730/RegExpInjection.ql.
+2022-12-28T03:04:52.1363016Z [70/88 eval 8ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-730/RegExpInjection.bqrs.
+2022-12-28T03:04:52.1426299Z Starting evaluation of codeql/javascript-queries/Security/CWE-730/ServerCrash.ql.
+2022-12-28T03:04:52.1427120Z Starting evaluation of codeql/javascript-queries/Security/CWE-754/UnvalidatedDynamicMethodCall.ql.
+2022-12-28T03:04:52.1430314Z Starting evaluation of codeql/javascript-queries/Security/CWE-770/MissingRateLimiting.ql.
+2022-12-28T03:04:52.1431042Z Starting evaluation of codeql/javascript-queries/Security/CWE-770/ResourceExhaustion.ql.
+2022-12-28T03:04:52.1431772Z Starting evaluation of codeql/javascript-queries/Security/CWE-776/XmlBomb.ql.
+2022-12-28T03:04:52.1432434Z Starting evaluation of codeql/javascript-queries/Security/CWE-798/HardcodedCredentials.ql.
+2022-12-28T03:04:52.1433255Z Starting evaluation of codeql/javascript-queries/Security/CWE-829/InsecureDownload.ql.
+2022-12-28T03:04:52.1433999Z Starting evaluation of codeql/javascript-queries/Security/CWE-830/FunctionalityFromUntrustedSource.ql.
+2022-12-28T03:04:52.1441287Z Starting evaluation of codeql/javascript-queries/Security/CWE-834/LoopBoundInjection.ql.
+2022-12-28T03:04:52.1448561Z Starting evaluation of codeql/javascript-queries/Security/CWE-843/TypeConfusionThroughParameterTampering.ql.
+2022-12-28T03:04:52.1450678Z Starting evaluation of codeql/javascript-queries/Security/CWE-915/PrototypePollutingAssignment.ql.
+2022-12-28T03:04:52.1451546Z Starting evaluation of codeql/javascript-queries/Security/CWE-915/PrototypePollutingFunction.ql.
+2022-12-28T03:04:52.1452715Z Starting evaluation of codeql/javascript-queries/Security/CWE-915/PrototypePollutingMergeCall.ql.
+2022-12-28T03:04:52.1453486Z Starting evaluation of codeql/javascript-queries/Security/CWE-916/InsufficientPasswordHash.ql.
+2022-12-28T03:04:52.1454935Z Starting evaluation of codeql/javascript-queries/Security/CWE-918/RequestForgery.ql.
+2022-12-28T03:04:52.1455854Z Starting evaluation of codeql/javascript-queries/Summary/LinesOfCode.ql.
+2022-12-28T03:04:52.1456449Z Starting evaluation of codeql/javascript-queries/Summary/LinesOfUserCode.ql.
+2022-12-28T03:04:52.1457133Z [71/88 eval 23ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-643/XpathInjection.bqrs.
+2022-12-28T03:04:52.1661422Z [72/88 eval 23ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-770/ResourceExhaustion.bqrs.
+2022-12-28T03:04:52.1815882Z [73/88 eval 37ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-834/LoopBoundInjection.bqrs.
+2022-12-28T03:04:52.1822540Z [74/88 eval 39ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-843/TypeConfusionThroughParameterTampering.bqrs.
+2022-12-28T03:04:52.2096590Z [75/88 eval 66ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-918/RequestForgery.bqrs.
+2022-12-28T03:04:52.2749057Z [76/88 eval 132ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-730/ServerCrash.bqrs.
+2022-12-28T03:04:52.3074541Z [77/88 eval 164ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-770/MissingRateLimiting.bqrs.
+2022-12-28T03:04:52.3185921Z [78/88 eval 172ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-754/UnvalidatedDynamicMethodCall.bqrs.
+2022-12-28T03:04:52.3326467Z [79/88 eval 189ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-776/XmlBomb.bqrs.
+2022-12-28T03:04:52.3896796Z [80/88 eval 245ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-829/InsecureDownload.bqrs.
+2022-12-28T03:04:52.3916108Z [81/88 eval 249ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-798/HardcodedCredentials.bqrs.
+2022-12-28T03:04:52.3977657Z [82/88 eval 255ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-830/FunctionalityFromUntrustedSource.bqrs.
+2022-12-28T03:04:52.4813227Z [83/88 eval 338ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-915/PrototypePollutingFunction.bqrs.
+2022-12-28T03:04:52.6205227Z [84/88 eval 477ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-915/PrototypePollutingAssignment.bqrs.
+2022-12-28T03:04:52.6543290Z [85/88 eval 511ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-916/InsufficientPasswordHash.bqrs.
+2022-12-28T03:04:52.6634260Z [86/88 eval 520ms] Evaluation done; writing results to codeql/javascript-queries/Summary/LinesOfCode.bqrs.
+2022-12-28T03:04:53.0725319Z [87/88 eval 929ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-915/PrototypePollutingMergeCall.bqrs.
+2022-12-28T03:04:54.3496870Z [88/88 eval 2.2s] Evaluation done; writing results to codeql/javascript-queries/Summary/LinesOfUserCode.bqrs.
+2022-12-28T03:04:54.3517811Z Shutting down query evaluator.
+2022-12-28T03:04:54.6168681Z ##[endgroup]
+2022-12-28T03:04:54.6169474Z ##[group]Interpreting results for javascript
+2022-12-28T03:04:54.6176999Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database interpret-results --threads=2 --format=sarif-latest -v --output=../results/javascript.sarif --no-sarif-add-snippets --print-diagnostics-summary --print-metrics-summary --sarif-group-rules-by-pack --sarif-add-query-help --sarif-add-baseline-file-info /home/runner/work/_temp/codeql_databases/javascript /home/runner/work/_temp/codeql_databases/javascript-queries-builtin.qls
+2022-12-28T03:04:55.4419648Z Writing logs to /home/runner/work/_temp/codeql_databases/javascript/log/database-interpret-results-20221228.030455.435.log.
+2022-12-28T03:04:55.6231929Z Recording pack reference codeql/javascript-queries at /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5.
+2022-12-28T03:04:55.7094321Z Scanning for [codeql-pack.yml, qlpack.yml] from /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/.codeqlmanifest.json
+2022-12-28T03:04:55.8263650Z Scanning for [codeql-pack.yml, qlpack.yml] from /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/
+2022-12-28T03:04:55.8270292Z Not scanning from /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql which is already done.
+2022-12-28T03:04:55.8301755Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DisablingSce.ql...
+2022-12-28T03:04:55.8903190Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/AngularJS/DisablingSce.bqrs.
+2022-12-28T03:04:55.9244393Z Interpreted problem query "Disabling SCE" (js/angular/disabling-sce) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DisablingSce.ql.
+2022-12-28T03:04:55.9282900Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DoubleCompilation.ql...
+2022-12-28T03:04:55.9622600Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/AngularJS/DoubleCompilation.bqrs.
+2022-12-28T03:04:55.9655395Z Interpreted problem query "Double compilation" (js/angular/double-compilation) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/DoubleCompilation.ql.
+2022-12-28T03:04:55.9662119Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/InsecureUrlWhitelist.ql...
+2022-12-28T03:04:55.9955796Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/AngularJS/InsecureUrlWhitelist.bqrs.
+2022-12-28T03:04:55.9976938Z Interpreted problem query "Insecure URL whitelist" (js/angular/insecure-url-whitelist) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/AngularJS/InsecureUrlWhitelist.ql.
+2022-12-28T03:04:55.9982940Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/DOM/TargetBlank.ql...
+2022-12-28T03:04:56.0183521Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/DOM/TargetBlank.bqrs.
+2022-12-28T03:04:56.0230988Z Interpreted problem query "Potentially unsafe external link" (js/unsafe-external-link) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/DOM/TargetBlank.ql.
+2022-12-28T03:04:56.0245789Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/AllowRunningInsecureContent.ql...
+2022-12-28T03:04:56.0453588Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Electron/AllowRunningInsecureContent.bqrs.
+2022-12-28T03:04:56.0473746Z Interpreted problem query "Enabling Electron allowRunningInsecureContent" (js/enabling-electron-insecure-content) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/AllowRunningInsecureContent.ql.
+2022-12-28T03:04:56.0483907Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/DisablingWebSecurity.ql...
+2022-12-28T03:04:56.0688487Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Electron/DisablingWebSecurity.bqrs.
+2022-12-28T03:04:56.0717529Z Interpreted problem query "Disabling Electron webSecurity" (js/disabling-electron-websecurity) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Electron/DisablingWebSecurity.ql.
+2022-12-28T03:04:56.0729345Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/PolynomialReDoS.ql...
+2022-12-28T03:04:56.0951276Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Performance/PolynomialReDoS.bqrs.
+2022-12-28T03:04:56.1036480Z Interpreted pathproblem query "Polynomial regular expression used on uncontrolled data" (js/polynomial-redos) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/PolynomialReDoS.ql.
+2022-12-28T03:04:56.1054496Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/ReDoS.ql...
+2022-12-28T03:04:56.1228509Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Performance/ReDoS.bqrs.
+2022-12-28T03:04:56.1248907Z Interpreted problem query "Inefficient regular expression" (js/redos) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Performance/ReDoS.ql.
+2022-12-28T03:04:56.1259918Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/RegExp/IdentityReplacement.ql...
+2022-12-28T03:04:56.1402043Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/RegExp/IdentityReplacement.bqrs.
+2022-12-28T03:04:56.1417290Z Interpreted problem query "Replacement of a substring with itself" (js/identity-replacement) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/RegExp/IdentityReplacement.ql.
+2022-12-28T03:04:56.1435806Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteHostnameRegExp.ql...
+2022-12-28T03:04:56.1636395Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/IncompleteHostnameRegExp.bqrs.
+2022-12-28T03:04:56.1657002Z Interpreted problem query "Incomplete regular expression for hostnames" (js/incomplete-hostname-regexp) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteHostnameRegExp.ql.
+2022-12-28T03:04:56.1662082Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql...
+2022-12-28T03:04:56.1915726Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/IncompleteUrlSchemeCheck.bqrs.
+2022-12-28T03:04:56.1930230Z Interpreted problem query "Incomplete URL scheme check" (js/incomplete-url-scheme-check) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSchemeCheck.ql.
+2022-12-28T03:04:56.1931615Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSubstringSanitization.ql...
+2022-12-28T03:04:56.2002952Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/IncompleteUrlSubstringSanitization.bqrs.
+2022-12-28T03:04:56.2062075Z Interpreted problem query "Incomplete URL substring sanitization" (js/incomplete-url-substring-sanitization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncompleteUrlSubstringSanitization.ql.
+2022-12-28T03:04:56.2064431Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncorrectSuffixCheck.ql...
+2022-12-28T03:04:56.2263238Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/IncorrectSuffixCheck.bqrs.
+2022-12-28T03:04:56.2275084Z Interpreted problem query "Incorrect suffix check" (js/incorrect-suffix-check) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/IncorrectSuffixCheck.ql.
+2022-12-28T03:04:56.2276392Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/OverlyLargeRange.ql...
+2022-12-28T03:04:56.2446417Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/OverlyLargeRange.bqrs.
+2022-12-28T03:04:56.2475901Z Interpreted problem query "Overly permissive regular expression range" (js/overly-large-range) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/OverlyLargeRange.ql.
+2022-12-28T03:04:56.2477242Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/UselessRegExpCharacterEscape.ql...
+2022-12-28T03:04:56.2592583Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-020/UselessRegExpCharacterEscape.bqrs.
+2022-12-28T03:04:56.2613627Z Interpreted problem query "Useless regular-expression character escape" (js/useless-regexp-character-escape) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-020/UselessRegExpCharacterEscape.ql.
+2022-12-28T03:04:56.2615024Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/TaintedPath.ql...
+2022-12-28T03:04:56.2774313Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-022/TaintedPath.bqrs.
+2022-12-28T03:04:56.2801303Z Interpreted pathproblem query "Uncontrolled data used in path expression" (js/path-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/TaintedPath.ql.
+2022-12-28T03:04:56.2805322Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/ZipSlip.ql...
+2022-12-28T03:04:56.2976504Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-022/ZipSlip.bqrs.
+2022-12-28T03:04:56.2991461Z Interpreted pathproblem query "Arbitrary file write during zip extraction ("Zip Slip")" (js/zipslip) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-022/ZipSlip.ql.
+2022-12-28T03:04:56.2993549Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-073/TemplateObjectInjection.ql...
+2022-12-28T03:04:56.3087758Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-073/TemplateObjectInjection.bqrs.
+2022-12-28T03:04:56.3142878Z Interpreted pathproblem query "Template Object Injection" (js/template-object-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-073/TemplateObjectInjection.ql.
+2022-12-28T03:04:56.3146014Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/CommandInjection.ql...
+2022-12-28T03:04:56.3299397Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-078/CommandInjection.bqrs.
+2022-12-28T03:04:56.3319564Z Interpreted pathproblem query "Uncontrolled command line" (js/command-line-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/CommandInjection.ql.
+2022-12-28T03:04:56.3320856Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/SecondOrderCommandInjection.ql...
+2022-12-28T03:04:56.3464241Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-078/SecondOrderCommandInjection.bqrs.
+2022-12-28T03:04:56.3493409Z Interpreted pathproblem query "Second order command injection" (js/second-order-command-line-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/SecondOrderCommandInjection.ql.
+2022-12-28T03:04:56.3502099Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/ShellCommandInjectionFromEnvironment.ql...
+2022-12-28T03:04:56.3626304Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-078/ShellCommandInjectionFromEnvironment.bqrs.
+2022-12-28T03:04:56.3641568Z Interpreted pathproblem query "Shell command built from environment values" (js/shell-command-injection-from-environment) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/ShellCommandInjectionFromEnvironment.ql.
+2022-12-28T03:04:56.3646627Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UnsafeShellCommandConstruction.ql...
+2022-12-28T03:04:56.3719921Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-078/UnsafeShellCommandConstruction.bqrs.
+2022-12-28T03:04:56.3733686Z Interpreted pathproblem query "Unsafe shell command constructed from library input" (js/shell-command-constructed-from-input) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UnsafeShellCommandConstruction.ql.
+2022-12-28T03:04:56.3739382Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UselessUseOfCat.ql...
+2022-12-28T03:04:56.3807541Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-078/UselessUseOfCat.bqrs.
+2022-12-28T03:04:56.3858411Z Interpreted problem query "Unnecessary use of `cat` process" (js/unnecessary-use-of-cat) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-078/UselessUseOfCat.ql.
+2022-12-28T03:04:56.3860835Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ExceptionXss.ql...
+2022-12-28T03:04:56.3983892Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/ExceptionXss.bqrs.
+2022-12-28T03:04:56.3999056Z Interpreted pathproblem query "Exception text reinterpreted as HTML" (js/xss-through-exception) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ExceptionXss.ql.
+2022-12-28T03:04:56.4003938Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ReflectedXss.ql...
+2022-12-28T03:04:56.4065049Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/ReflectedXss.bqrs.
+2022-12-28T03:04:56.4094411Z Interpreted pathproblem query "Reflected cross-site scripting" (js/reflected-xss) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/ReflectedXss.ql.
+2022-12-28T03:04:56.4098280Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/StoredXss.ql...
+2022-12-28T03:04:56.4217912Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/StoredXss.bqrs.
+2022-12-28T03:04:56.4233196Z Interpreted pathproblem query "Stored cross-site scripting" (js/stored-xss) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/StoredXss.ql.
+2022-12-28T03:04:56.4234275Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeHtmlConstruction.ql...
+2022-12-28T03:04:56.4364045Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/UnsafeHtmlConstruction.bqrs.
+2022-12-28T03:04:56.4392744Z Interpreted pathproblem query "Unsafe HTML constructed from library input" (js/html-constructed-from-input) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeHtmlConstruction.ql.
+2022-12-28T03:04:56.4393941Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeJQueryPlugin.ql...
+2022-12-28T03:04:56.4518706Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/UnsafeJQueryPlugin.bqrs.
+2022-12-28T03:04:56.4529458Z Interpreted pathproblem query "Unsafe jQuery plugin" (js/unsafe-jquery-plugin) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/UnsafeJQueryPlugin.ql.
+2022-12-28T03:04:56.4530544Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/Xss.ql...
+2022-12-28T03:04:56.4624894Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/Xss.bqrs.
+2022-12-28T03:04:56.4643120Z Interpreted pathproblem query "Client-side cross-site scripting" (js/xss) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/Xss.ql.
+2022-12-28T03:04:56.4644183Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/XssThroughDom.ql...
+2022-12-28T03:04:56.4734609Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-079/XssThroughDom.bqrs.
+2022-12-28T03:04:56.4756212Z Interpreted pathproblem query "DOM text reinterpreted as HTML" (js/xss-through-dom) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-079/XssThroughDom.ql.
+2022-12-28T03:04:56.4757468Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-089/SqlInjection.ql...
+2022-12-28T03:04:56.4864514Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-089/SqlInjection.bqrs.
+2022-12-28T03:04:56.4883923Z Interpreted pathproblem query "Database query built from user-controlled sources" (js/sql-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-089/SqlInjection.ql.
+2022-12-28T03:04:56.4885184Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/CodeInjection.ql...
+2022-12-28T03:04:56.4965754Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-094/CodeInjection.bqrs.
+2022-12-28T03:04:56.4999355Z Interpreted pathproblem query "Code injection" (js/code-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/CodeInjection.ql.
+2022-12-28T03:04:56.5000586Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ExpressionInjection.ql...
+2022-12-28T03:04:56.5133217Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-094/ExpressionInjection.bqrs.
+2022-12-28T03:04:56.5144795Z Interpreted problem query "Expression injection in Actions" (js/actions/command-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ExpressionInjection.ql.
+2022-12-28T03:04:56.5147350Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ImproperCodeSanitization.ql...
+2022-12-28T03:04:56.5256004Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-094/ImproperCodeSanitization.bqrs.
+2022-12-28T03:04:56.5313346Z Interpreted pathproblem query "Improper code sanitization" (js/bad-code-sanitization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/ImproperCodeSanitization.ql.
+2022-12-28T03:04:56.5315972Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/UnsafeDynamicMethodAccess.ql...
+2022-12-28T03:04:56.5403029Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-094/UnsafeDynamicMethodAccess.bqrs.
+2022-12-28T03:04:56.5416153Z Interpreted pathproblem query "Unsafe dynamic method access" (js/unsafe-dynamic-method-access) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-094/UnsafeDynamicMethodAccess.ql.
+2022-12-28T03:04:56.5417499Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-1004/ClientExposedCookie.ql...
+2022-12-28T03:04:56.5498986Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-1004/ClientExposedCookie.bqrs.
+2022-12-28T03:04:56.5511828Z Interpreted problem query "Sensitive server cookie exposed to the client" (js/client-exposed-cookie) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-1004/ClientExposedCookie.ql.
+2022-12-28T03:04:56.5513124Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/BadTagFilter.ql...
+2022-12-28T03:04:56.5607543Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/BadTagFilter.bqrs.
+2022-12-28T03:04:56.5665183Z Interpreted problem query "Bad HTML filtering regexp" (js/bad-tag-filter) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/BadTagFilter.ql.
+2022-12-28T03:04:56.5666452Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/DoubleEscaping.ql...
+2022-12-28T03:04:56.5754139Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/DoubleEscaping.bqrs.
+2022-12-28T03:04:56.5762543Z Interpreted problem query "Double escaping or unescaping" (js/double-escaping) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/DoubleEscaping.ql.
+2022-12-28T03:04:56.5764097Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteHtmlAttributeSanitization.ql...
+2022-12-28T03:04:56.5869128Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/IncompleteHtmlAttributeSanitization.bqrs.
+2022-12-28T03:04:56.5897406Z Interpreted pathproblem query "Incomplete HTML attribute sanitization" (js/incomplete-html-attribute-sanitization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteHtmlAttributeSanitization.ql.
+2022-12-28T03:04:56.5898891Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteMultiCharacterSanitization.ql...
+2022-12-28T03:04:56.5988584Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/IncompleteMultiCharacterSanitization.bqrs.
+2022-12-28T03:04:56.6000606Z Interpreted problem query "Incomplete multi-character sanitization" (js/incomplete-multi-character-sanitization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteMultiCharacterSanitization.ql.
+2022-12-28T03:04:56.6001976Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteSanitization.ql...
+2022-12-28T03:04:56.6089178Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/IncompleteSanitization.bqrs.
+2022-12-28T03:04:56.6108247Z Interpreted problem query "Incomplete string escaping or encoding" (js/incomplete-sanitization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/IncompleteSanitization.ql.
+2022-12-28T03:04:56.6110085Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/UnsafeHtmlExpansion.ql...
+2022-12-28T03:04:56.6197486Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-116/UnsafeHtmlExpansion.bqrs.
+2022-12-28T03:04:56.6207502Z Interpreted problem query "Unsafe expansion of self-closing HTML tag" (js/unsafe-html-expansion) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-116/UnsafeHtmlExpansion.ql.
+2022-12-28T03:04:56.6209657Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-134/TaintedFormatString.ql...
+2022-12-28T03:04:56.6318279Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-134/TaintedFormatString.bqrs.
+2022-12-28T03:04:56.6336188Z Interpreted pathproblem query "Use of externally-controlled format string" (js/tainted-format-string) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-134/TaintedFormatString.ql.
+2022-12-28T03:04:56.6337524Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-178/CaseSensitiveMiddlewarePath.ql...
+2022-12-28T03:04:56.6411534Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-178/CaseSensitiveMiddlewarePath.bqrs.
+2022-12-28T03:04:56.6428186Z Interpreted problem query "Case-sensitive middleware path" (js/case-sensitive-middleware-path) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-178/CaseSensitiveMiddlewarePath.ql.
+2022-12-28T03:04:56.6508517Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-200/PrivateFileExposure.ql...
+2022-12-28T03:04:56.6512191Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-200/PrivateFileExposure.bqrs.
+2022-12-28T03:04:56.6550349Z Interpreted problem query "Exposure of private files" (js/exposure-of-private-files) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-200/PrivateFileExposure.ql.
+2022-12-28T03:04:56.6553588Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-201/PostMessageStar.ql...
+2022-12-28T03:04:56.6727446Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-201/PostMessageStar.bqrs.
+2022-12-28T03:04:56.6728690Z Interpreted pathproblem query "Cross-window communication with unrestricted target origin" (js/cross-window-information-leak) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-201/PostMessageStar.ql.
+2022-12-28T03:04:56.6729996Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-209/StackTraceExposure.ql...
+2022-12-28T03:04:56.6795108Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-209/StackTraceExposure.bqrs.
+2022-12-28T03:04:56.6809342Z Interpreted pathproblem query "Information exposure through a stack trace" (js/stack-trace-exposure) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-209/StackTraceExposure.ql.
+2022-12-28T03:04:56.6810374Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-295/DisablingCertificateValidation.ql...
+2022-12-28T03:04:56.6950661Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-295/DisablingCertificateValidation.bqrs.
+2022-12-28T03:04:56.6960971Z Interpreted problem query "Disabling certificate validation" (js/disabling-certificate-validation) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-295/DisablingCertificateValidation.ql.
+2022-12-28T03:04:56.6966065Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-300/InsecureDependencyResolution.ql...
+2022-12-28T03:04:56.7088015Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-300/InsecureDependencyResolution.bqrs.
+2022-12-28T03:04:56.7114956Z Interpreted problem query "Dependency download using unencrypted communication channel" (js/insecure-dependency) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-300/InsecureDependencyResolution.ql.
+2022-12-28T03:04:56.7116019Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/BuildArtifactLeak.ql...
+2022-12-28T03:04:56.7218634Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-312/BuildArtifactLeak.bqrs.
+2022-12-28T03:04:56.7244037Z Interpreted pathproblem query "Storage of sensitive information in build artifact" (js/build-artifact-leak) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/BuildArtifactLeak.ql.
+2022-12-28T03:04:56.7245039Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextLogging.ql...
+2022-12-28T03:04:56.7330418Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-312/CleartextLogging.bqrs.
+2022-12-28T03:04:56.7362191Z Interpreted pathproblem query "Clear-text logging of sensitive information" (js/clear-text-logging) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextLogging.ql.
+2022-12-28T03:04:56.7363397Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextStorage.ql...
+2022-12-28T03:04:56.7448501Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-312/CleartextStorage.bqrs.
+2022-12-28T03:04:56.7468312Z Interpreted pathproblem query "Clear text storage of sensitive information" (js/clear-text-storage-of-sensitive-data) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-312/CleartextStorage.ql.
+2022-12-28T03:04:56.7469383Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-326/InsufficientKeySize.ql...
+2022-12-28T03:04:56.7540924Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-326/InsufficientKeySize.bqrs.
+2022-12-28T03:04:56.7553706Z Interpreted problem query "Use of a weak cryptographic key" (js/insufficient-key-size) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-326/InsufficientKeySize.ql.
+2022-12-28T03:04:56.7554660Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BadRandomness.ql...
+2022-12-28T03:04:56.7641606Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-327/BadRandomness.bqrs.
+2022-12-28T03:04:56.7662729Z Interpreted problem query "Creating biased random numbers from a cryptographically secure source." (js/biased-cryptographic-random) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BadRandomness.ql.
+2022-12-28T03:04:56.7663806Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BrokenCryptoAlgorithm.ql...
+2022-12-28T03:04:56.7848050Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-327/BrokenCryptoAlgorithm.bqrs.
+2022-12-28T03:04:56.7860512Z Interpreted pathproblem query "Use of a broken or weak cryptographic algorithm" (js/weak-cryptographic-algorithm) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-327/BrokenCryptoAlgorithm.ql.
+2022-12-28T03:04:56.7867474Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-338/InsecureRandomness.ql...
+2022-12-28T03:04:56.7931308Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-338/InsecureRandomness.bqrs.
+2022-12-28T03:04:56.7953460Z Interpreted pathproblem query "Insecure randomness" (js/insecure-randomness) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-338/InsecureRandomness.ql.
+2022-12-28T03:04:56.7954479Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-346/CorsMisconfigurationForCredentials.ql...
+2022-12-28T03:04:56.8023751Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-346/CorsMisconfigurationForCredentials.bqrs.
+2022-12-28T03:04:56.8040420Z Interpreted pathproblem query "CORS misconfiguration for credentials transfer" (js/cors-misconfiguration-for-credentials) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-346/CorsMisconfigurationForCredentials.ql.
+2022-12-28T03:04:56.8041822Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-347/MissingJWTKeyVerification.ql...
+2022-12-28T03:04:56.8153544Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-347/MissingJWTKeyVerification.bqrs.
+2022-12-28T03:04:56.8165152Z Interpreted problem query "JWT missing secret or public key verification" (js/jwt-missing-verification) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-347/MissingJWTKeyVerification.ql.
+2022-12-28T03:04:56.8166176Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-352/MissingCsrfMiddleware.ql...
+2022-12-28T03:04:56.8259549Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-352/MissingCsrfMiddleware.bqrs.
+2022-12-28T03:04:56.8273176Z Interpreted problem query "Missing CSRF middleware" (js/missing-token-validation) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-352/MissingCsrfMiddleware.ql.
+2022-12-28T03:04:56.8274197Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-400/DeepObjectResourceExhaustion.ql...
+2022-12-28T03:04:56.8396040Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-400/DeepObjectResourceExhaustion.bqrs.
+2022-12-28T03:04:56.8416180Z Interpreted pathproblem query "Resources exhaustion from deep object traversal" (js/resource-exhaustion-from-deep-object-traversal) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-400/DeepObjectResourceExhaustion.ql.
+2022-12-28T03:04:56.8423385Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-502/UnsafeDeserialization.ql...
+2022-12-28T03:04:56.8534630Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-502/UnsafeDeserialization.bqrs.
+2022-12-28T03:04:56.8560623Z Interpreted pathproblem query "Deserialization of user-controlled data" (js/unsafe-deserialization) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-502/UnsafeDeserialization.ql.
+2022-12-28T03:04:56.8561770Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-598/SensitiveGetQuery.ql...
+2022-12-28T03:04:56.8718142Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-598/SensitiveGetQuery.bqrs.
+2022-12-28T03:04:56.8728742Z Interpreted problem query "Sensitive data read from GET request" (js/sensitive-get-query) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-598/SensitiveGetQuery.ql.
+2022-12-28T03:04:56.8729728Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ClientSideUrlRedirect.ql...
+2022-12-28T03:04:56.8829292Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-601/ClientSideUrlRedirect.bqrs.
+2022-12-28T03:04:56.8878534Z Interpreted pathproblem query "Client-side URL redirect" (js/client-side-unvalidated-url-redirection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ClientSideUrlRedirect.ql.
+2022-12-28T03:04:56.8879634Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ServerSideUrlRedirect.ql...
+2022-12-28T03:04:56.9025955Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-601/ServerSideUrlRedirect.bqrs.
+2022-12-28T03:04:56.9051763Z Interpreted pathproblem query "Server-side URL redirect" (js/server-side-unvalidated-url-redirection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-601/ServerSideUrlRedirect.ql.
+2022-12-28T03:04:56.9068681Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-611/Xxe.ql...
+2022-12-28T03:04:56.9157358Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-611/Xxe.bqrs.
+2022-12-28T03:04:56.9169680Z Interpreted pathproblem query "XML external entity expansion" (js/xxe) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-611/Xxe.ql.
+2022-12-28T03:04:56.9170598Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-614/ClearTextCookie.ql...
+2022-12-28T03:04:56.9224480Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-614/ClearTextCookie.bqrs.
+2022-12-28T03:04:56.9241407Z Interpreted problem query "Clear text transmission of sensitive cookie" (js/clear-text-cookie) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-614/ClearTextCookie.ql.
+2022-12-28T03:04:56.9242444Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.ql...
+2022-12-28T03:04:56.9381990Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.bqrs.
+2022-12-28T03:04:56.9395316Z Interpreted pathproblem query "Host header poisoning in email generation" (js/host-header-forgery-in-email-generation) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-640/HostHeaderPoisoningInEmailGeneration.ql.
+2022-12-28T03:04:56.9396481Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-643/XpathInjection.ql...
+2022-12-28T03:04:56.9463776Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-643/XpathInjection.bqrs.
+2022-12-28T03:04:56.9476269Z Interpreted pathproblem query "XPath injection" (js/xpath-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-643/XpathInjection.ql.
+2022-12-28T03:04:56.9477188Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/RegExpInjection.ql...
+2022-12-28T03:04:56.9541954Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-730/RegExpInjection.bqrs.
+2022-12-28T03:04:56.9559289Z Interpreted pathproblem query "Regular expression injection" (js/regex-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/RegExpInjection.ql.
+2022-12-28T03:04:56.9563335Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/ServerCrash.ql...
+2022-12-28T03:04:56.9619626Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-730/ServerCrash.bqrs.
+2022-12-28T03:04:56.9634173Z Interpreted pathproblem query "Server crash" (js/server-crash) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-730/ServerCrash.ql.
+2022-12-28T03:04:56.9635377Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-754/UnvalidatedDynamicMethodCall.ql...
+2022-12-28T03:04:56.9702157Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-754/UnvalidatedDynamicMethodCall.bqrs.
+2022-12-28T03:04:56.9714518Z Interpreted pathproblem query "Unvalidated dynamic method call" (js/unvalidated-dynamic-method-call) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-754/UnvalidatedDynamicMethodCall.ql.
+2022-12-28T03:04:56.9715550Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/MissingRateLimiting.ql...
+2022-12-28T03:04:56.9782302Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-770/MissingRateLimiting.bqrs.
+2022-12-28T03:04:56.9793285Z Interpreted problem query "Missing rate limiting" (js/missing-rate-limiting) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/MissingRateLimiting.ql.
+2022-12-28T03:04:56.9794232Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/ResourceExhaustion.ql...
+2022-12-28T03:04:56.9896309Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-770/ResourceExhaustion.bqrs.
+2022-12-28T03:04:56.9911109Z Interpreted pathproblem query "Resource exhaustion" (js/resource-exhaustion) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-770/ResourceExhaustion.ql.
+2022-12-28T03:04:56.9912036Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-776/XmlBomb.ql...
+2022-12-28T03:04:57.0059694Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-776/XmlBomb.bqrs.
+2022-12-28T03:04:57.0078527Z Interpreted pathproblem query "XML internal entity expansion" (js/xml-bomb) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-776/XmlBomb.ql.
+2022-12-28T03:04:57.0079451Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-798/HardcodedCredentials.ql...
+2022-12-28T03:04:57.0161866Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-798/HardcodedCredentials.bqrs.
+2022-12-28T03:04:57.0199422Z Interpreted pathproblem query "Hard-coded credentials" (js/hardcoded-credentials) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-798/HardcodedCredentials.ql.
+2022-12-28T03:04:57.0200715Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-829/InsecureDownload.ql...
+2022-12-28T03:04:57.0254685Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-829/InsecureDownload.bqrs.
+2022-12-28T03:04:57.0273280Z Interpreted pathproblem query "Download of sensitive file through insecure connection" (js/insecure-download) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-829/InsecureDownload.ql.
+2022-12-28T03:04:57.0274502Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-830/FunctionalityFromUntrustedSource.ql...
+2022-12-28T03:04:57.0343470Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-830/FunctionalityFromUntrustedSource.bqrs.
+2022-12-28T03:04:57.0356447Z Interpreted problem query "Inclusion of functionality from an untrusted source" (js/functionality-from-untrusted-source) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-830/FunctionalityFromUntrustedSource.ql.
+2022-12-28T03:04:57.0358731Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-834/LoopBoundInjection.ql...
+2022-12-28T03:04:57.0456496Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-834/LoopBoundInjection.bqrs.
+2022-12-28T03:04:57.0492025Z Interpreted pathproblem query "Loop bound injection" (js/loop-bound-injection) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-834/LoopBoundInjection.ql.
+2022-12-28T03:04:57.0493576Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-843/TypeConfusionThroughParameterTampering.ql...
+2022-12-28T03:04:57.0602280Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-843/TypeConfusionThroughParameterTampering.bqrs.
+2022-12-28T03:04:57.0671741Z Interpreted pathproblem query "Type confusion through parameter tampering" (js/type-confusion-through-parameter-tampering) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-843/TypeConfusionThroughParameterTampering.ql.
+2022-12-28T03:04:57.0673235Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingAssignment.ql...
+2022-12-28T03:04:57.0723146Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-915/PrototypePollutingAssignment.bqrs.
+2022-12-28T03:04:57.0764185Z Interpreted pathproblem query "Prototype-polluting assignment" (js/prototype-polluting-assignment) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingAssignment.ql.
+2022-12-28T03:04:57.0765557Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingFunction.ql...
+2022-12-28T03:04:57.0835904Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-915/PrototypePollutingFunction.bqrs.
+2022-12-28T03:04:57.0881587Z Interpreted pathproblem query "Prototype-polluting function" (js/prototype-pollution-utility) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingFunction.ql.
+2022-12-28T03:04:57.0883015Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingMergeCall.ql...
+2022-12-28T03:04:57.0952062Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-915/PrototypePollutingMergeCall.bqrs.
+2022-12-28T03:04:57.0971886Z Interpreted pathproblem query "Prototype-polluting merge call" (js/prototype-pollution) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-915/PrototypePollutingMergeCall.ql.
+2022-12-28T03:04:57.0973294Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-916/InsufficientPasswordHash.ql...
+2022-12-28T03:04:57.1079304Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-916/InsufficientPasswordHash.bqrs.
+2022-12-28T03:04:57.1137755Z Interpreted pathproblem query "Use of password hash with insufficient computational effort" (js/insufficient-password-hash) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-916/InsufficientPasswordHash.ql.
+2022-12-28T03:04:57.1143860Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-918/RequestForgery.ql...
+2022-12-28T03:04:57.1280291Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Security/CWE-918/RequestForgery.bqrs.
+2022-12-28T03:04:57.1293529Z Interpreted pathproblem query "Server-side request forgery" (js/request-forgery) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Security/CWE-918/RequestForgery.ql.
+2022-12-28T03:04:57.1294407Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/ExtractionErrors.ql...
+2022-12-28T03:04:57.1376540Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Diagnostics/ExtractionErrors.bqrs.
+2022-12-28T03:04:57.1396069Z Interpreted diagnostic query "Extraction errors" (js/diagnostics/extraction-errors) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/ExtractionErrors.ql.
+2022-12-28T03:04:57.1396992Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/SuccessfullyExtractedFiles.ql...
+2022-12-28T03:04:57.1476926Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Diagnostics/SuccessfullyExtractedFiles.bqrs.
+2022-12-28T03:04:57.1499837Z Interpreted diagnostic query "Successfully extracted files" (js/diagnostics/successfully-extracted-files) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Diagnostics/SuccessfullyExtractedFiles.ql.
+2022-12-28T03:04:57.1500857Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfCode.ql...
+2022-12-28T03:04:57.1565195Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Summary/LinesOfCode.bqrs.
+2022-12-28T03:04:57.1582076Z Interpreted metric query "Total lines of JavaScript and TypeScript code in the database" (js/summary/lines-of-code) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfCode.ql.
+2022-12-28T03:04:57.1583018Z Interpreting /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfUserCode.ql...
+2022-12-28T03:04:57.1649863Z  ... found results file at /home/runner/work/_temp/codeql_databases/javascript/results/codeql/javascript-queries/Summary/LinesOfUserCode.bqrs.
+2022-12-28T03:04:57.1658573Z Interpreted metric query "Total lines of user written JavaScript and TypeScript code in the database" (js/summary/lines-of-user-code) at path /opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/qlpacks/codeql/javascript-queries/0.4.5/Summary/LinesOfUserCode.ql.
+2022-12-28T03:04:57.2693112Z Interpreting file baseline information.
+2022-12-28T03:04:57.2974732Z Analysis produced the following diagnostic data:
+2022-12-28T03:04:57.2975063Z 
+2022-12-28T03:04:57.3029802Z |          Diagnostic          |  Summary   |
+2022-12-28T03:04:57.3030769Z +------------------------------+------------+
+2022-12-28T03:04:57.3033619Z | Successfully extracted files | 14 results |
+2022-12-28T03:04:57.3034113Z 
+2022-12-28T03:04:57.3041127Z Analysis produced the following metric data:
+2022-12-28T03:04:57.3041653Z 
+2022-12-28T03:04:57.3097714Z |                                   Metric                                   | Value |
+2022-12-28T03:04:57.3098681Z +----------------------------------------------------------------------------+-------+
+2022-12-28T03:04:57.3099534Z | Total lines of JavaScript and TypeScript code in the database              |   270 |
+2022-12-28T03:04:57.3099950Z | Total lines of user written JavaScript and TypeScript code in the database |   270 |
+2022-12-28T03:04:57.3100184Z 
+2022-12-28T03:04:57.5944032Z ##[endgroup]
+2022-12-28T03:04:57.5944862Z Analysis produced the following diagnostic data:
+2022-12-28T03:04:57.5945355Z 
+2022-12-28T03:04:57.5945667Z |          Diagnostic          |  Summary   |
+2022-12-28T03:04:57.5946415Z +------------------------------+------------+
+2022-12-28T03:04:57.5946935Z | Successfully extracted files | 14 results |
+2022-12-28T03:04:57.5947359Z 
+2022-12-28T03:04:57.5947622Z Analysis produced the following metric data:
+2022-12-28T03:04:57.5947897Z 
+2022-12-28T03:04:57.5948116Z |                                   Metric                                   | Value |
+2022-12-28T03:04:57.5948725Z +----------------------------------------------------------------------------+-------+
+2022-12-28T03:04:57.5949283Z | Total lines of JavaScript and TypeScript code in the database              |   270 |
+2022-12-28T03:04:57.5950324Z | Total lines of user written JavaScript and TypeScript code in the database |   270 |
+2022-12-28T03:04:57.5950680Z 
+2022-12-28T03:04:57.5950773Z 
+2022-12-28T03:04:57.5951415Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database print-baseline /home/runner/work/_temp/codeql_databases/javascript
+2022-12-28T03:04:58.4108580Z Counted a baseline of 263 lines of code for javascript.
+2022-12-28T03:04:58.4358782Z Counted a baseline of 263 lines of code for javascript.
+2022-12-28T03:04:58.4359409Z 
+2022-12-28T03:04:58.4360337Z ##[group]Cleaning up databases
+2022-12-28T03:04:58.4367060Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database cleanup /home/runner/work/_temp/codeql_databases/javascript --mode=brutal
+2022-12-28T03:04:59.2133109Z Cleaning up existing TRAP files after import...
+2022-12-28T03:04:59.2178818Z TRAP files cleaned up (4ms).
+2022-12-28T03:04:59.2182543Z Cleaning up scratch directory...
+2022-12-28T03:04:59.2187637Z Scratch directory cleaned up (0ms).
+2022-12-28T03:04:59.2894579Z ##[endgroup]
+2022-12-28T03:04:59.2966255Z ##[group]Uploading results
+2022-12-28T03:04:59.2967397Z Processing sarif files: ["/home/runner/work/open-reusables/results/javascript.sarif"]
+2022-12-28T03:04:59.4809888Z Uploading results
+2022-12-28T03:04:59.9512284Z Successfully uploaded results
+2022-12-28T03:04:59.9513329Z ##[endgroup]
+2022-12-28T03:04:59.9588485Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20221202/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/javascript --output=/home/runner/work/_temp/codeql_databases/javascript.zip --name=javascript
+2022-12-28T03:05:01.0076019Z Creating bundle metadata for /home/runner/work/_temp/codeql_databases/javascript...
+2022-12-28T03:05:01.2277799Z Creating zip file at /home/runner/work/_temp/codeql_databases/javascript.zip.
+2022-12-28T03:05:04.2079601Z Skipping upload of TRAP cache for javascript as it is too small
+2022-12-28T03:05:04.2084311Z ##[group]Waiting for processing to finish
+2022-12-28T03:05:04.5600200Z Analysis upload status is complete.
+2022-12-28T03:05:04.5600927Z ##[endgroup]

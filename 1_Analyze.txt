@@ -1,0 +1,8 @@
+2022-12-28T03:03:31.1525450Z ##[section]Starting: Prepare job analyze
+2022-12-28T03:03:31.1527390Z Evaluating strategy
+2022-12-28T03:03:31.1528218Z Creating job 'javascript'
+2022-12-28T03:03:31.1528507Z Evaluating timeout
+2022-12-28T03:03:31.1528550Z Evaluating cancel timeout
+2022-12-28T03:03:31.1528585Z Evaluating continue on error
+2022-12-28T03:03:31.1528629Z Evaluating target
+2022-12-28T03:03:31.1530017Z ##[section]Finishing: Prepare job analyze

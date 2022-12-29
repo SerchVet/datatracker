@@ -1,0 +1,36 @@
+2022-12-28T03:03:41.4545727Z Current runner version: '2.299.1'
+2022-12-28T03:03:41.4579915Z ##[group]Operating System
+2022-12-28T03:03:41.4580552Z Ubuntu
+2022-12-28T03:03:41.4580886Z 22.04.1
+2022-12-28T03:03:41.4581214Z LTS
+2022-12-28T03:03:41.4581516Z ##[endgroup]
+2022-12-28T03:03:41.4581943Z ##[group]Runner Image
+2022-12-28T03:03:41.4582458Z Image: ubuntu-22.04
+2022-12-28T03:03:41.4582767Z Version: 20221212.1
+2022-12-28T03:03:41.4583297Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20221212.1/images/linux/Ubuntu2204-Readme.md
+2022-12-28T03:03:41.4583976Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20221212.1
+2022-12-28T03:03:41.4584450Z ##[endgroup]
+2022-12-28T03:03:41.4584817Z ##[group]Runner Image Provisioner
+2022-12-28T03:03:41.4585183Z 2.0.91.1
+2022-12-28T03:03:41.4585455Z ##[endgroup]
+2022-12-28T03:03:41.4586564Z ##[group]GITHUB_TOKEN Permissions
+2022-12-28T03:03:41.4587315Z Actions: write
+2022-12-28T03:03:41.4587663Z Checks: write
+2022-12-28T03:03:41.4588138Z Contents: write
+2022-12-28T03:03:41.4588942Z Deployments: write
+2022-12-28T03:03:41.4589373Z Discussions: write
+2022-12-28T03:03:41.4589705Z Issues: write
+2022-12-28T03:03:41.4590071Z Metadata: read
+2022-12-28T03:03:41.4590496Z Packages: write
+2022-12-28T03:03:41.4590844Z Pages: write
+2022-12-28T03:03:41.4591226Z PullRequests: write
+2022-12-28T03:03:41.4591649Z RepositoryProjects: write
+2022-12-28T03:03:41.4592039Z SecurityEvents: write
+2022-12-28T03:03:41.4592584Z Statuses: write
+2022-12-28T03:03:41.4593100Z ##[endgroup]
+2022-12-28T03:03:41.4597724Z Secret source: Actions
+2022-12-28T03:03:41.4598403Z Prepare workflow directory
+2022-12-28T03:03:41.5595508Z Prepare all required actions
+2022-12-28T03:03:41.5824877Z Getting action download info
+2022-12-28T03:03:42.1090881Z Download action repository 'actions/checkout@v2.3.4' (SHA:5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f)
+2022-12-28T03:03:42.7616102Z Download action repository 'github/codeql-action@v1' (SHA:4b3fd9198891cf782111537728021ffc6ae722ba)

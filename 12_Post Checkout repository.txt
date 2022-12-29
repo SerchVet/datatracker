@@ -1,0 +1,9 @@
+2022-12-28T03:05:06.1076852Z Post job cleanup.
+2022-12-28T03:05:06.2291334Z [command]/usr/bin/git version
+2022-12-28T03:05:06.2349615Z git version 2.38.2
+2022-12-28T03:05:06.2403699Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-12-28T03:05:06.2446316Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-12-28T03:05:06.2753228Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-12-28T03:05:06.2782228Z http.https://github.com/.extraheader
+2022-12-28T03:05:06.2816311Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-12-28T03:05:06.2855887Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
