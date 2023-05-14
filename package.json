@@ -19,7 +19,7 @@
     "@twuni/emojify": "1.0.2",
     "bootstrap": "5.2.3",
     "bootstrap-icons": "1.10.2",
-    "browser-fs-access": "0.31.1",
+    "browser-fs-access": "0.33.1",
     "caniuse-lite": "1.0.30001439",
     "d3": "7.7.0",
     "file-saver": "2.0.5",
